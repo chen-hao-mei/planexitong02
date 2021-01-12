@@ -6,7 +6,7 @@ public class Order {
     private String id;
     private float jpjg;   //机票价格
     private float airPortTax;   //机场税
-    private float ryf;  //燃油费
+    private float ryf;   //燃油费
     private float hkzgx;    //航空综合险
     private float jpgtx;    //机票退改险
     private float yhq;    //优惠券

@@ -2,19 +2,31 @@ package cn.hcnu.bean;
 
 public class Flight {
     private String id;
+
+    private String flightId;   //飞机编号
     private String planeType;   //飞机类型
-    private String seatsNo;   //座位号
-    private String totalseatNumb;    //航班总座位数
-    private String departureAirpot;  //出发机场
+    private int currentSeatNumb;    //航班总座位数
+    private String departureAirport;  //出发机场
     private String destinationAirport;     //目的机场
     private String departureTime;    //出发日期
 
-    public String getId() {
-        return id;
+    public Flight(String id, String flightId, String planeType, int currentSeatNumb,
+                  String departureAirport, String destinationAirport, String departureTime) {
+        this.id = id;
+        this.flightId = flightId;
+        this.planeType = planeType;
+        this.currentSeatNumb = currentSeatNumb;
+        this.departureAirport = departureAirport;
+        this.destinationAirport = destinationAirport;
+        this.departureTime = departureTime;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getFlightId() {
+        return flightId;
+    }
+
+    public void setFlightId(String flightId) {
+        this.flightId = flightId;
     }
 
     public String getPlaneType() {
@@ -25,28 +37,20 @@ public class Flight {
         this.planeType = planeType;
     }
 
-    public String getSeatsNo() {
-        return seatsNo;
+    public int getCurrentSeatNumb() {
+        return currentSeatNumb;
     }
 
-    public void setSeatsNo(String seatsNo) {
-        this.seatsNo = seatsNo;
+    public void setCurrentSeatNumb(int currentSeatNumb) {
+        this.currentSeatNumb = currentSeatNumb;
     }
 
-    public String getTotalseatNumb() {
-        return totalseatNumb;
+    public String getDepartureAirport() {
+        return departureAirport;
     }
 
-    public void setTotalseatNumb(String totalseatNumb) {
-        this.totalseatNumb = totalseatNumb;
-    }
-
-    public String getDepartureAirpot() {
-        return departureAirpot;
-    }
-
-    public void setDepartureAirpot(String departureAirpot) {
-        this.departureAirpot = departureAirpot;
+    public void setDepartureAirport(String departureAirport) {
+        this.departureAirport = departureAirport;
     }
 
     public String getDestinationAirport() {
@@ -63,5 +67,17 @@ public class Flight {
 
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "flightId='" + flightId + '\'' +
+                ", planeType='" + planeType + '\'' +
+                ", currentSeatNumb=" + currentSeatNumb +
+                ", departureAirport='" + departureAirport + '\'' +
+                ", destinationAirport='" + destinationAirport + '\'' +
+                ", departureTime='" + departureTime + '\'' +
+                '}';
     }
 }

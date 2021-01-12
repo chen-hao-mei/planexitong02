@@ -1,12 +1,20 @@
-package cn.hcnu.dao;
+package cn.hcnu.bll.impl;
 
 import cn.hcnu.bean.Flight;
 import cn.hcnu.bll.IFlightService;
-import cn.hcnu.bll.impl.FlightServiceImpl;
+import cn.hcnu.dao.FlightDaoIml;
+import cn.hcnu.dao.IFlightDao;
 
 import java.util.Set;
 
-public class FlightDaoIml implements IFlightDao {
+public class FlightServiceImpl implements IFlightService {
+
+   IFlightDao iFlightDao;
+
+   public FlightServiceImpl(){
+       iFlightDao =new FlightDaoIml();
+   }
+
 
     @Override
     public void insertFightDao(Flight flight) {
@@ -35,6 +43,11 @@ public class FlightDaoIml implements IFlightDao {
 
     @Override
     public void updateFlight(Flight flight) {
+
+    }
+
+    @Override
+    public void insertFlight(Flight flight) {
 
     }
 }
