@@ -3,8 +3,8 @@ package cn.hcnu.bean;
 public class Flight {
     private String id;
     private String planeType;   //飞机类型
-    private String seatsNo;   //座位
-    private String totalseatNumb;    //
+    private String seatsNo;   //座位号
+    private String totalseatNumb;    //航班总座位数
     private String departureAirpot;  //出发机场
     private String destinationAirport;     //目的机场
     private String departureTime;    //出发日期
