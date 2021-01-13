@@ -1,4 +1,4 @@
-package cn.hcnu.bean;
+package cn.edu.hcnu.bean;
 
 import java.util.Set;
 

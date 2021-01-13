@@ -1,4 +1,4 @@
-package cn.hcnu.bean;
+package cn.edu.hcnu.bean;
 
 public class Flight {
     private String id;
@@ -19,6 +19,14 @@ public class Flight {
         this.departureAirport = departureAirport;
         this.destinationAirport = destinationAirport;
         this.departureTime = departureTime;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFlightId() {
@@ -72,12 +80,12 @@ public class Flight {
     @Override
     public String toString() {
         return "Flight{" +
-                "flightId='" + flightId + '\'' +
-                ", planeType='" + planeType + '\'' +
-                ", currentSeatNumb=" + currentSeatNumb +
-                ", departureAirport='" + departureAirport + '\'' +
-                ", destinationAirport='" + destinationAirport + '\'' +
-                ", departureTime='" + departureTime + '\'' +
-                '}';
+                "飞机编号='" + flightId + '\'' +
+                ", 机型='" + planeType + '\'' +
+                ", 总座位数=" + currentSeatNumb +
+                ", 起飞机场='" + departureAirport + '\'' +
+                ", 目的机场='" + destinationAirport + '\'' +
+                ", 起飞时间='" + departureTime + '\'' +
+                '}'+"\n";
     }
 }
