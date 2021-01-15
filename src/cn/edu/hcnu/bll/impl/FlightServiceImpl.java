@@ -12,27 +12,29 @@ public class FlightServiceImpl implements IFlightService {
 
    IFlightDao iFlightDao;    //定义一个类
 
-    //构造这个方法，调用这个FlightDaoTml()方法
+    //构造这个方法，并且调用FlightDaoTml()方法
    public FlightServiceImpl(){
        iFlightDao =new FlightDaoIml();
    }
 
-
+   //返回界面录入的信息
     @Override
     public void insertFlight(Flight flight) throws SQLException {
        iFlightDao.insertFlight(flight);
-        System.out.println(flight.getId()+"\n");
-        System.out.println("界面传来的航班信息:"+flight+"\n");
+        System.out.println("此航班的ID为"+flight.getId()+"\n");
+        System.out.println("界面传来的航班信息:"+"\n"+flight);
     }
 
+    //将录入的信息显示出来
     @Override
     public Set<Flight> getAllFlights() throws SQLException {
        return iFlightDao.getAllFlights();
     }
 
+    //按相应查询方式查询航班信息
     @Override
-    public Flight getFlightByDepartureTime(String departureTime) {
-        return null;
+    public Flight getFlightByDepartureTime(String departureTime) throws SQLException {
+        return iFlightDao.getFlightByDepartureTime(departureTime);
     }
 
     @Override
